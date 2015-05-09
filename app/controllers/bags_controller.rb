@@ -25,12 +25,9 @@ class BagsController < ApplicationController
   # POST /bags.json
   def create
     @bag = Bag.new(bag_params)
-    @locker = Locker.where(size: @bag.size).first
 
     respond_to do |format|
       if @bag.save
-        @locker.bags << @bag
-        @locker.save
 
         format.html { redirect_to @bag, notice: 'Bag was successfully created.' }
         format.json { render :show, status: :created, location: @bag }
