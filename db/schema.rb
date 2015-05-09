@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150509200126) do
+ActiveRecord::Schema.define(version: 20150509200848) do
+
+  create_table "bags", force: true do |t|
+    t.string   "size"
+    t.integer  "locker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bags", ["locker_id"], name: "index_bags_on_locker_id"
 
   create_table "lockers", force: true do |t|
     t.string   "size"
