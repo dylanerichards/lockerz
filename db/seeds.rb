@@ -7,8 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 %w(small medium large).each do |size|
-  1000.times do
-    Locker.create(size: "#{size}")
-  end
+  1000.times { Locker.create(size: "#{size}") }
 end
 
