@@ -20,7 +20,7 @@ class BagsController < ApplicationController
 
     respond_to do |format|
       if @bag.save
-        Locker.accept_bag(@bag)
+        Locker.accept(@bag)
         format.html { redirect_to @bag, notice: 'Bag added.' }
       else
         format.html { render :new }

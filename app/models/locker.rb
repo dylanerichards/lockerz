@@ -14,7 +14,7 @@ class Locker < ActiveRecord::Base
     where(size: bag.size).first
   end
 
-  def self.accept_bag(bag)
+  def self.accept(bag)
     empty.of_size(bag).bags << bag
   end
 end
