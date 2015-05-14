@@ -1,0 +1,52 @@
+.container {
+  width: 800px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: #b0e0e6;
+}
+
+.small {
+  width: 15px;
+  height: 15px;
+  background: #F2F3AE;
+  margin: 5px;
+  float: right;
+  font-size: 5px;
+}
+
+.medium {
+  width: 15px;
+  height: 15px;
+  background: #EDD382;
+  margin: 5px;
+  float: right;
+  font-size: 5px;
+}
+
+.large {
+  width: 15px;
+  height: 15px;
+  background: #FC9E4F;
+  margin: 5px;
+  float: right;
+  font-size: 5px;
+}
+
+.taken {
+  width: 15px;
+  height: 15px;
+  background: #020122;
+  margin: 5px;
+  float: right;
+  font-size: 5px;
+  color: white;
+}
+
+.number {
+  position: relative;
+  bottom: 4px;
+}

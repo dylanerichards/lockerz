@@ -1,1 +1,25 @@
-This is the home page
+<div class="container center">
+<% @small_lockers.each do |small_locker| %>
+  <div class=<%= "#{small_locker.display_class} "%>>
+    <div class="number">
+      <%= small_locker.id %>
+    </div>
+  </div>
+<% end %>
+
+<% @medium_lockers.each do |medium_locker| %>
+  <div class=<%= "#{medium_locker.display_class} "%>>
+    <div class="number">
+      <%= medium_locker.id %>
+    </div>
+  </div>
+<% end %>
+
+<% @large_lockers.each do |large_locker| %>
+  <div class=<%= "#{large_locker.display_class} "%>>
+    <div class="number">
+      <%= large_locker.id %>
+    </div>
+  </div>
+<% end %>
+</div>
