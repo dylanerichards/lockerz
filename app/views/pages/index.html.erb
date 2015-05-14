@@ -2,7 +2,7 @@
 <% @small_lockers.each do |small_locker| %>
   <div class=<%= "#{small_locker.display_class} "%>>
     <div class="number">
-      <%= small_locker.id, small_locker %>
+      <%= link_to small_locker.id, small_locker %>
     </div>
   </div>
 <% end %>
@@ -18,7 +18,7 @@
 <% @large_lockers.each do |large_locker| %>
   <div class=<%= "#{large_locker.display_class} "%>>
     <div class="number">
-      <%= large_locker.id, large_locker %>
+      <%= link_to large_locker.id, large_locker %>
     </div>
   </div>
 <% end %>
