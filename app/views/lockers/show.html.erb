@@ -5,5 +5,17 @@
   <%= @locker.size %>
 </p>
 
+<p>
+  <strong>Bags:</strong>
+  <%= @locker.bags.map(&:size) %>
+</p>
+
+<% if @locker.bags.any? %>
+  <%= link_to "Remove Bag", empty_locker_path %>
+<% end %>
+
+<br>
+<br>
+
 <%= link_to 'Edit', edit_locker_path(@locker) %> |
 <%= link_to 'Back', lockers_path %>

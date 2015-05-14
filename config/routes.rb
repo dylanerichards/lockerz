@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :bags
 
   resources :lockers
+
+  get "/empty_locker/:id", to: "lockers#empty", as: "empty_locker"
 end

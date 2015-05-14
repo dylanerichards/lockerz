@@ -1,5 +1,5 @@
 class LockersController < ApplicationController
-  before_action :set_locker, only: [:show, :edit, :update, :destroy]
+  before_action :set_locker, only: [:show, :edit, :update, :destroy, :empty]
 
   # GET /lockers
   # GET /lockers.json
@@ -59,6 +59,11 @@ class LockersController < ApplicationController
       format.html { redirect_to lockers_url, notice: 'Locker was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def empty
+    @locker.bags.clear
+    redirect_to root_path, { notice: "Bag removed!" }
   end
 
   private
